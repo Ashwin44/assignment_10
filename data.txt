@@ -1,0 +1,9 @@
+unzip("C:/Users/Ashwin/Downloads/AirQualityUCI.zip")
+library(xlsx)
+air_quality1 <- read.xlsx("C:/Users/Ashwin/Documents/AirQualityUCI.xlsx",sheetIndex=1)
+
+#In above table data is only upto 9357 row. other rows are just empty so we need to remove those rows
+#Also last two columns are extra full of NA we need to remove them
+
+air_quality1 <- air_quality1[1:9357,1:15]
+
